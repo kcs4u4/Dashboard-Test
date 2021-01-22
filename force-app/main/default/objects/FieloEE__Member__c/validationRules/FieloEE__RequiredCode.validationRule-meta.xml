@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloEE__RequiredCode</fullName>
+    <active>true</active>
+    <errorConditionFormula>( ISPICKVAL( FieloEE__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloEE__IdentificationCode__c != &apos;&apos; ) ) || ( ! ISPICKVAL( FieloEE__IdentificationType__c, &apos;&apos; ) &amp;&amp; ( FieloEE__IdentificationCode__c == &apos;&apos; ) )</errorConditionFormula>
+    <errorMessage>You must complete Identification type and Identification Number or neither of both</errorMessage>
+</ValidationRule>

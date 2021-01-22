@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloEE__DeepClone</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Deep Clone</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+
+var menu = &apos;{!FieloEE__Menu__c.Id}&apos;;
+
+var saveURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloEE__PublicSettings__c.FieloEE__PackagePrefix__c}&quot; + &quot;MenuCloneBackEnd&quot; + &quot;%3F&quot; + &quot;menuId=&quot; + menu;
+
+var cancelURL = &quot;/apex/&quot; + &quot;{!$Setup.FieloEE__PublicSettings__c.FieloEE__PackagePrefix__c}&quot; + &quot;FrontEndLandingPageBackEnd&quot;;
+
+window.location = &quot;/{!FieloEE__Menu__c.Id}/e?clone=1&amp;saveURL=&quot;+saveURL+&quot;&amp;cancelURL=&quot;+cancelURL;</url>
+</WebLink>

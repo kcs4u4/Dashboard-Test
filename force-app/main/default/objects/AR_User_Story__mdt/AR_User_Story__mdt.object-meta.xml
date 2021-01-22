@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>AR User Story</description>
+    <label>AR User Story</label>
+    <pluralLabel>AR User Storys</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloEE__RuleChangeStatus</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Active/Inactive</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT (&quot;/soap/ajax/23.0/connection.js&quot;)}
+if(confirm(&apos;{!$Label.fieloee__fielo_changestatus}?&apos;)){
+     var c = new sforce.SObject(&quot;{!$Setup.FieloEE__PublicSettings__c.FieloEE__PackagePrefix__c}Rule__c&quot;);
+     var toUpdate = [];
+     c.id = &apos;{!FieloEE__Rule__c.Id}&apos;;
+     c.{!$Setup.FieloEE__PublicSettings__c.FieloEE__PackagePrefix__c}IsActive__c = {!IF(FieloEE__Rule__c.FieloEE__IsActive__c, &apos;false&apos;, &apos;true&apos;)};
+    toUpdate.push(c);
+    sforce.connection.update(toUpdate);
+
+    window.location.reload();
+}</url>
+</WebLink>

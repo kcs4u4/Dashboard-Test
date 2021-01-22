@@ -1,0 +1,10 @@
+<apex:page docType="html-5.0"  controller="datesample">
+    <apex:form >
+    <apex:pageBlock >
+         <apex:pageBlockSection >
+             <apex:input value="{!dat}"/>
+        </apex:pageBlockSection>
+        <apex:commandButton value="save" action="{!save}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieloEE__ValidateTransactionType</fullName>
+    <active>true</active>
+    <errorConditionFormula>FieloEE__Value__c != 0 &amp;&amp; ( ISPICKVAL(FieloEE__Type__c, &apos;Code Insert&apos; ) || ISPICKVAL(FieloEE__Type__c, &apos;Referral - Step 1&apos; ) || ISPICKVAL(FieloEE__Type__c, &apos;Referral - Step 2&apos; ) || ISPICKVAL(FieloEE__Type__c, &apos;Registration&apos; ) )</errorConditionFormula>
+    <errorMessage>You must enter &quot;Purchase value = 0&quot; for transactions of types: Registration, Code insert, Referral - Simple signup, and Referral - Complete signup.</errorMessage>
+</ValidationRule>

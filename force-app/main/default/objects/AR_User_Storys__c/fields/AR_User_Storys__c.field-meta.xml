@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AR_User_Storys__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>AR User Story</description>
+    <externalId>false</externalId>
+    <inlineHelpText>AR User Story</inlineHelpText>
+    <label>Asset</label>
+    <lookupFilter>
+        <active>true</active>
+        <infoMessage>AR User Story</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Asset</referenceTo>
+    <relationshipLabel>AR User Story</relationshipLabel>
+    <relationshipName>AR_User_Story</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
